@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>성탄축하발표회</title>
+    <meta name="description" content="성탄축하발표회 안내 페이지 (일정/순서/안내/오시는 길)" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="container top-inner">
+        <div class="brand">
+          <div class="badge">🎄</div>
+          <div>
+            <h1 class="title">성탄축하발표회</h1>
+            <p class="subtitle">기쁨으로 함께하는 성탄</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#info">안내</a>
+          <a href="#schedule">순서</a>
+          <a href="#notice">공지</a>
+          <a href="#location">오시는 길</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="kicker">함께 초대합니다</p>
+            <h2 class="hero-title">성탄의 기쁜 소식을<br />찬양과 이야기로 전해요</h2>
+
+            <div class="hero-cards">
+              <div class="card">
+                <p class="label">일시</p>
+                <p class="value" id="eventDateText">2025-12-21 (주일) 14:00</p>
+              </div>
+              <div class="card">
+                <p class="label">장소</p>
+                <p class="value">길교회 본당</p>
+              </div>
+              <div class="card">
+                <p class="label">D-Day</p>
+                <p class="value"><span id="dday">-</span></p>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#schedule">순서 보기</a>
+              <button class="btn" id="copyInvite">초대 문구 복사</button>
+            </div>
+
+            <p class="small" id="inviteText">
+              🎁 성탄축하발표회에 초대합니다! 12/21(주일) 14:00, 길교회 본당에서 함께해요.
+            </p>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel">
+              <h3 class="panel-title">행사를 위한 안내</h3>
+              <ul class="list">
+                <li>입장 및 좌석 안내는 13:30부터 진행됩니다.</li>
+                <li>행사 시작 전 상품응모권을 제공합니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="info" class="section">
+        <div class="container">
+          <h2 class="section-title">행사 안내</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <h3 class="panel-title">대상</h3>
+              <p class="text">가족, 친구, 이웃 누구나 환영합니다.</p>
+              <h3 class="panel-title">발표회 주최</h3>
+              <p class="text">길교회 대학 청년부</p>
+            </div>
+            <div class="panel">
+              <h3 class="panel-title">행사의 발표</h3>
+              <p class="text">찬양, 연주, 워십, 연극 등으로 성탄의 의미를 함께 나눕니다.</p>
+              <p class="text muted">※ 아래 순서를 확인하여 주세요!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedule" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">프로그램 순서</h2>
+            <!-- <button class="btn" id="toggleTimes">시간 표시 켜기/끄기</button> -->
+          </div>
+
+          <div class="timeline" id="timeline">
+            <div class="item">
+              <div class="time" data-time="14:00">00:00</div>
+              <div class="content">
+                <h3>발표회 진행 순서는 2025년 12월 18일(목) 공개합니다.</h3>
+                <p>
+                  마1:23 보라 처녀가 잉태하여 아들을 낳을 것이요 그의 이름은 임마누엘이라 하리라
+                  하셨으니 이를 번역한즉 하나님이 우리와 함께 계시다 함이라
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="notice" class="section">
+        <div class="container">
+          <h2 class="section-title">공지사항</h2>
+          <div class="panel">
+            <ul class="list">
+              <li><b>좌석:</b> 앞줄은 어르신/아이 동반 가정 우선 안내</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="section">
+        <div class="container">
+          <h2 class="section-title">오시는 길</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <h3 class="panel-title">주소</h3>
+              <p class="text">경기도 의정부시 호국로 1077</p>
+              <h3 class="panel-title">교통</h3>
+              <ul class="list">
+                <li>버스: 동명빌라정류장 하차</li>
+                <li>주차: 교회 앞 대로변</li>
+              </ul>
+              <a class="btn primary" href="https://naver.me/5kxW8rpD" target="_blank">지도 열기</a>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">문의</h3>
+              <p class="text">담당: 김준영청년</p>
+              <p class="text muted">
+                <a href="https://open.kakao.com/o/sFGPkq6h">여기를 클릭하여 문의하세요!</a>
+              </p>
+              <div class="footer-note">
+                <p class="small">© <span id="year"></span> 길교회 2025 성탄축하발표회</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
