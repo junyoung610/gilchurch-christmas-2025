@@ -8,12 +8,12 @@ body {
 }
 body {
   font-family: system-ui, -apple-system, "Pretendard", sans-serif;
-  background: #0f1115;
-  color: #e9edf5;
+  background: #f7f8fb;
+  color: #1a1d24;
 }
 
 a {
-  color: #fff;
+  color: #1a1d24;
 }
 
 .container {
@@ -21,13 +21,15 @@ a {
   margin: 0 auto;
 }
 
+/* ================= Header ================= */
+
 .top {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(15, 17, 21, 0.8);
+  background: rgba(247, 248, 251, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .top-inner {
   display: flex;
@@ -48,7 +50,7 @@ a {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
 }
 .title {
   margin: 0;
@@ -56,9 +58,11 @@ a {
 }
 .subtitle {
   margin: 2px 0 0;
-  color: rgba(233, 237, 245, 0.72);
+  color: rgba(26, 29, 36, 0.65);
   font-size: 13px;
 }
+
+/* ================= Navigation ================= */
 
 .nav {
   display: flex;
@@ -67,19 +71,21 @@ a {
   justify-content: flex-end;
 }
 .nav a {
-  color: rgba(233, 237, 245, 0.78);
+  color: rgba(26, 29, 36, 0.75);
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 10px;
 }
 .nav a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.06);
+  color: #000;
 }
+
+/* ================= Hero ================= */
 
 .hero {
   padding: 42px 0 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .hero-inner {
   display: grid;
@@ -90,14 +96,16 @@ a {
 
 .kicker {
   margin: 0 0 10px;
-  color: rgba(233, 237, 245, 0.72);
+  color: rgba(26, 29, 36, 0.6);
 }
 .hero-title {
   margin: 0 0 18px;
   font-size: 34px;
-  line-height: 1.15;
+  line-height: 1.6;
   letter-spacing: -0.4px;
 }
+
+/* ================= Cards ================= */
 
 .hero-cards {
   display: grid;
@@ -106,20 +114,22 @@ a {
   margin: 18px 0;
 }
 .card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   padding: 14px;
 }
 .label {
   margin: 0;
   font-size: 12px;
-  color: rgba(233, 237, 245, 0.7);
+  color: rgba(26, 29, 36, 0.65);
 }
 .value {
   margin: 8px 0 0;
   font-weight: 700;
 }
+
+/* ================= Buttons ================= */
 
 .hero-actions {
   display: flex;
@@ -128,9 +138,9 @@ a {
   margin: 10px 0 8px;
 }
 .btn {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  color: #1a1d24;
   border-radius: 12px;
   padding: 10px 14px;
   cursor: pointer;
@@ -140,22 +150,24 @@ a {
   gap: 8px;
 }
 .btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #f0f1f4;
 }
 .btn.primary {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: #e6e8ee;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 .small {
   font-size: 12px;
-  color: rgba(233, 237, 245, 0.72);
+  color: rgba(26, 29, 36, 0.6);
   margin: 8px 0 0;
 }
 
+/* ================= Panels ================= */
+
 .hero-panel .panel,
 .panel {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   padding: 16px;
 }
@@ -165,11 +177,13 @@ a {
 }
 .text {
   margin: 0 0 10px;
-  color: rgba(233, 237, 245, 0.9);
+  color: rgba(26, 29, 36, 0.9);
 }
 .muted {
-  color: rgba(233, 237, 245, 0.7);
+  color: rgba(26, 29, 36, 0.65);
 }
+
+/* ================= Section ================= */
 
 .section {
   padding: 26px 0;
@@ -182,10 +196,10 @@ a {
 
 .section-head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  align-items: self-start;
+  flex-direction: column;
   margin-bottom: 10px;
+  font-size: 13px;
 }
 
 .grid-2 {
@@ -194,32 +208,45 @@ a {
   gap: 14px;
 }
 
+/* ================= Lists ================= */
+
 .list {
   margin: 0;
   padding-left: 18px;
-  color: rgba(233, 237, 245, 0.88);
+  color: rgba(26, 29, 36, 0.85);
+}
+
+.list b {
+  display: block;
+  margin-left: -10px;
+  margin-bottom: 4px;
+  font-size: 20px;
 }
 .list li {
-  margin: 8px 0;
+  margin: 3px 0 0 30px;
+  font-size: 15px;
 }
+
+/* ================= Timeline ================= */
 
 .timeline {
   display: grid;
   gap: 10px;
 }
 .item {
-  display: grid;
-  grid-template-columns: 88px 1fr;
-  gap: 10px;
+  display: flex;
+  gap: 5px;
   align-items: start;
   padding: 14px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 .time {
+  text-align: center;
+  width: 35px;
   font-weight: 800;
-  color: rgba(233, 237, 245, 0.92);
+  color: rgba(26, 29, 36, 0.9);
 }
 .content h3 {
   margin: 0 0 6px;
@@ -227,16 +254,27 @@ a {
 }
 .content p {
   margin: 0;
-  color: rgba(233, 237, 245, 0.78);
+  color: rgba(26, 29, 36, 0.75);
 }
+
+/* ================= Footer ================= */
 
 .footer-note {
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+#inviteText {
+  display: none;
+}
+
+/* ================= Responsive ================= */
+
 @media (max-width: 860px) {
+  .nav {
+    display: none;
+  }
   .hero-inner {
     grid-template-columns: 1fr;
   }

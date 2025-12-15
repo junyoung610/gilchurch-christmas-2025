@@ -1,3 +1,14 @@
+// ===============================
+// 행사 설정 (캘린더/디데이)
+// ===============================
+const EVENT = {
+  startKST: "2025-12-21T14:00:00+09:00",
+  endKST: "2025-12-21T16:00:00+09:00", // 구글캘린더용 종료시간(원하시면 수정)
+  title: "길교회 성탄축하발표회",
+  location: "길교회 본당 (경기도 의정부시 호국로 1077)",
+  details: "성탄의 기쁜 소식을 찬양과 이야기로 함께 나눕니다.",
+};
+
 // ✅ 1) 행사 날짜/시간 설정 (여기만 바꾸면 D-Day 자동 계산됨)
 const EVENT_ISO = "2025-12-21T14:00:00+09:00"; // 한국시간 기준
 
@@ -68,3 +79,58 @@ function initToggleTimes() {
   initCopyInvite();
   initToggleTimes();
 })();
+
+// ===============================
+// 캘린더에 추가 (Google Calendar)
+// ===============================
+const addCalendarLink = document.getElementById("addCalendar");
+if (addCalendarLink) {
+  function toGcalUTC(dateStrKST) {
+    const d = new Date(dateStrKST);
+    const yyyy = d.getUTCFullYear();
+    const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(d.getUTCDate()).padStart(2, "0");
+    const hh = String(d.getUTCHours()).padStart(2, "0");
+    const mi = String(d.getUTCMinutes()).padStart(2, "0");
+    const ss = String(d.getUTCSeconds()).padStart(2, "0");
+    return `${yyyy}${mm}${dd}T${hh}${mi}${ss}Z`;
+  }
+
+  const text = encodeURIComponent(EVENT.title);
+  const location = encodeURIComponent(EVENT.location);
+  const details = encodeURIComponent(EVENT.details);
+  const startUTC = toGcalUTC(EVENT.startKST);
+  const endUTC = toGcalUTC(EVENT.endKST);
+
+  addCalendarLink.href =
+    `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+    `&text=${text}` +
+    `&dates=${startUTC}/${endUTC}` +
+    `&details=${details}` +
+    `&location=${location}`;
+}
+
+// ===============================
+// 공유하기 (Web Share API / fallback: 링크 복사)
+// ===============================
+const shareBtn = document.getElementById("sharePage");
+if (shareBtn) {
+  shareBtn.addEventListener("click", async () => {
+    const shareData = {
+      title: EVENT.title,
+      text: "12/21(주일) 14:00, 길교회 본당에서 함께해요 🎄",
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("공유 링크를 복사했어요!");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  });
+}
