@@ -10,6 +10,8 @@ body {
   font-family: system-ui, -apple-system, "Pretendard", sans-serif;
   background: #f7f8fb;
   color: #1a1d24;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
 a {
@@ -173,7 +175,7 @@ a {
 }
 .panel-title {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 20px;
 }
 .text {
   margin: 0 0 10px;
