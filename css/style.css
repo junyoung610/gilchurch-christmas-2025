@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
 * {
   box-sizing: border-box;
 }
@@ -183,6 +185,16 @@ a {
 }
 .muted {
   color: rgba(26, 29, 36, 0.65);
+}
+
+.margin-10 {
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 13px;
+  font-style: italic;
+  color: #008;
 }
 
 /* ================= Section ================= */
